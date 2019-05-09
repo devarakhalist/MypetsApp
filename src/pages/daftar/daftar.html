@@ -1,38 +1,36 @@
 <ion-header>
 
   <ion-navbar color="biruTua">
-    <ion-title>daftar</ion-title>
+    <ion-title>Daftar</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding class="background">
   <div text-center>
-    <img src="https://cdn.pixabay.com/photo/2014/12/10/05/50/english-bulldog-562723_960_720.jpg" alt="gambar">
-    <h3 style="color: #474747 ">Masuk</h3>
+    <img class="logo" src="https://www.flaticon.com/premium-icon/icons/svg/1719/1719344.svg">
+    <h3 style="color:#47525e">MypetsApp</h3>
   </div>
 
   <ion-list>
+
     <ion-item>
       <ion-label floating color="biruTua">Nama</ion-label>
       <ion-input type="text" [(ngModel)]="nama"></ion-input>
     </ion-item>
-    
+
     <ion-item>
       <ion-label floating color="biruTua">Email</ion-label>
       <ion-input type="text" [(ngModel)]="email"></ion-input>
     </ion-item>
- 
+
     <ion-item>
       <ion-label floating color="biruTua">Password</ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
 
-    <button ion-button black color="biruTua"(click)="daftar()">daftar</button>
-
   </ion-list>
 
-
+  <button ion-button block color="biruTua" (click)="daftar()">Masuk</button>
 
 </ion-content>
