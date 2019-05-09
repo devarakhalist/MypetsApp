@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the MasukPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, AlertController, Tabs } from 'ionic-angular';
+import { DaftarPage } from '../daftar/daftar';
+import { TabsPage } from '../tabs/tabs';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,62 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MasukPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email: any
+  password: any
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MasukPage');
+  }
+
+  pindah() {
+    this.navCtrl.push(DaftarPage)
+  }
+
+  masuk() {
+    if (this.email && this.password) {
+      if (this.password.length >= 8)
+        this.navCtrl.setRoot(TabsPage)
+      else {
+        this.errorPassword()
+      }
+    }
+    else {
+      this.showConfirm()
+    }
+  }
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Data tidak lengkep',
+      message: 'isi email dan password Anda',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+      ]
+    });
+    confirm.present();
+  }
+
+  errorPassword() {
+    const confirm = this.alertCtrl.create({
+      title: 'Password salah',
+      message: 'Minimal & huruf ',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+      ]
+    });
+    confirm.present();
   }
 
 }
