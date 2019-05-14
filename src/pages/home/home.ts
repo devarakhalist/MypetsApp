@@ -18,8 +18,8 @@ export class HomePage {
       user_status : ""
     },
     {
-      user_name : "",
-      user_photo :"",
+      user_name : "burung hantu",
+      user_photo :"https://storage.trubus.id/storage/app/public/posts/t20181102/big_714b136f48653bce6a1a94d07e41d7f13a5fc9b2.jpg",
       user_status : ""
     },
   ]
