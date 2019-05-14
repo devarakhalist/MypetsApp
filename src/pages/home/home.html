@@ -1,17 +1,14 @@
 <ion-header>
-  <ion-navbar colcr="BiruTua">
+  <ion-navbar colcr="biruTua">
     <ion-title text-center>Beranda</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let data of dataStatus"(click)="bukaProfil(data)">
-      <ion-avatar item-start>
-        <img [src]="data.user_photo">
-      </ion-avatar>
-      <h2>{{data.user_name}}</h2>
-      <p>{{data.user_status}}</p>
-    </ion-item>
-  </ion-list>
+<ion-content text-center>
+  <ion-fab right bottom>
+    <button>
+      <ion-icon></ion-icon>
+    </button>
+  </ion-fab>
+  <img *ngFor="let data of dataUpload" class="gambar" [src]="data.foto" alt="picture">
 </ion-content>

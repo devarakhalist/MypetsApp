@@ -1,3 +1,17 @@
 page-masuk {
+    .logo{
+        widows: 20vw;
+        height: 20vw;
+        margin-top: 15vh;
+    }
+
+    .background{
+        background:
+        linear-gradient(rgba(255,255,255,0.75)),
+        url("https://cdn.pixabay.com/photo/2012/05/07/13/41/dog-48490_960_720.png")
+    }
+    .item-md{
+        background: rgba(0, 0, 0, 0)
+    }
 
 }
