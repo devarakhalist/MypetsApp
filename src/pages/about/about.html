@@ -1,11 +1,45 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<div padding>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="Galley">
+      Galley
+    </ion-segment-button>
+    <ion-segment-button value="Store">
+      Store
+    </ion-segment-button>
+    <ion-segment-button value="Buying">
+      Buying
+    </ion-segment-button>
+  </ion-segment>
+</div>
 
-<ion-content padding>
+<div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'Galley'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--HqfzgkTd--/c_scale,f_auto,fl_progressive,q_80,w_800/wp2qinp6fu0d8guhex9v.jpg">
+        </ion-thumbnail>
+        <h2>Dog</h2>
+      </ion-item>
+      ...
+    </ion-list>
+  
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'Store'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="https://www.usadogshop.com/skin/light_responsive/images/custom/dog/store-photo.jpg">
+        </ion-thumbnail>
+        <h2>USA dog shop</h2>
+      </ion-item>
+      ...
+    </ion-list>
 
-</ion-content>
+  <ion-list *ngSwitchCase="'Buying'">
+    <ion-item>
+      <ion-thumbnail item-start>>
+      </ion-thumbnail>
+      <h2>$28.99</h2>
+    </ion-item>
+    ...
+  </ion-list>
+</div>
