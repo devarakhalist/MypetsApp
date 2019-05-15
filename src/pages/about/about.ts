@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  pet : any = "Galley"
+
   constructor(public navCtrl: NavController) {
 
   }
