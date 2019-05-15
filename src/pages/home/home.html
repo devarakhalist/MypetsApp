@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-navbar colcr="biruTua">
-    <ion-title text-center>Beranda</ion-title>
+  <ion-navbar color="biruTua">
+    <ion-title text-center>Mengais</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content text-center>
   <ion-fab right bottom>
-    <button>
-      <ion-icon></ion-icon>
+    <button ion-fab color="BiruTua" (click)="tambahFoto()">
+      <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
   <img *ngFor="let data of dataUpload" class="gambar" [src]="data.foto" alt="picture">
