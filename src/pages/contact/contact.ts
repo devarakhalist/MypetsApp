@@ -26,8 +26,8 @@ export class ContactPage {
 
   showConfirm() {
     const confirm = this.alertCtrl.create({
-      title: 'Mau keluar?',
-      message: 'Data akan hilang',
+      title: 'keluar?',
+      message: 'anda akan kehilangan konsep anda',
       buttons: [
         {
           text: 'Batal',
