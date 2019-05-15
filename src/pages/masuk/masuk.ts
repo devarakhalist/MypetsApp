@@ -38,8 +38,8 @@ export class MasukPage {
   }
   showConfirm() {
     const confirm = this.alertCtrl.create({
-      title: 'Data tidak lengkep',
-      message: 'isi email dan password Anda',
+      title: 'Kredensial Salah',
+      message: 'Nama pengguna atau kata sandi tidak valid',
       buttons: [
         {
           text: 'Ok',
