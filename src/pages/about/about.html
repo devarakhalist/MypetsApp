@@ -4,8 +4,8 @@
     <ion-title text-center>Shopping</ion-title>
   </ion-navbar>
   <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="Galley">
-      Galley
+    <ion-segment-button value="Tokopedia">
+      Tokopedia
     </ion-segment-button>
     <ion-segment-button value="Store">
       Store
@@ -19,106 +19,48 @@
 
 <ion-content padding class="background">
   <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'Galley'">
+    <ion-list *ngSwitchCase="'Tokopedia'">
+      <ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col col-6 *ngFor="let data of barang" no-padding>
+            <ion-card>
+              <button class="fav" clear ion-button icon-only (click)="ubahFav(data)">
+                <ion-icon *ngIf="!data.favorit" color="dark" name="heart-outline"></ion-icon>
+                <ion-icon *ngIf="data.favorit" color="danger" name="heart"></ion-icon>
+              </button>
+              <img src="https://www.sctech.edu/wp-content/plugins/ajax-search-pro/img/default.jpg" *ngIf="!data.image"
+                class="pict" (click)="bukaRinci(data)" />
+              <img [src]="data.image" *ngIf="data.image" class="pict" (click)="bukaRinci(data)" />
+              <ion-card-content (click)="bukaRinci(data)">
+                <p class="JudulItem">{{data.nama}}</p>
+                <p class="HargaItem">
+                  Rp. {{data.price}}
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Store'">
       <ion-item>
         <ion-thumbnail item-start>
-          <img
-            src="https://i.kinja-img.com/gawker-media/image/upload/s--HqfzgkTd--/c_scale,f_auto,fl_progressive,q_80,w_800/wp2qinp6fu0d8guhex9v.jpg">
+          <img src="https://www.usadogshop.com/skin/light_responsive/images/custom/dog/store-photo.jpg">
         </ion-thumbnail>
-        <h2>Dog</h2>
+        <h2>USA dog shop</h2>
       </ion-item>
       ...
     </ion-list>
 
-    <div [ngSwitch]="pet">
-      <ion-list *ngSwitchCase="'Galley'">
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img
-              src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1414,w_2101,x_10,y_0/v1554921998/shape/mentalfloss/549585-istock-909106260.jpg?itok=NB9DbGG9">
-          </ion-thumbnail>
-          <h2>Cat white</h2>
-        </ion-item>
-        ...
-      </ion-list>
+    <ion-list *ngSwitchCase="'Buying'">
+      <ion-item>
+        <ion-thumbnail item-start>>
+        </ion-thumbnail>
+        <h2>IDR 23,000</h2>
+      </ion-item>
+      ...
+    </ion-list>
 
-      <div [ngSwitch]="pet">
-        <ion-list *ngSwitchCase="'Galley'">
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img
-                src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
-            </ion-thumbnail>
-            <h2>Rusty spotted cat</h2>
-          </ion-item>
-          ...
-        </ion-list>
-
-          <div [ngSwitch]="pet">
-            <ion-list *ngSwitchCase="'Store'">
-              <ion-item>
-                <ion-thumbnail item-start>
-                  <img src="https://www.usadogshop.com/skin/light_responsive/images/custom/dog/store-photo.jpg">
-                </ion-thumbnail>
-                <h2>USA dog shop</h2>
-              </ion-item>
-              ...
-            </ion-list>
-
-            <div [ngSwitch]="pet">
-              <ion-list *ngSwitchCase="'Store'">
-                <ion-item>
-                  <ion-thumbnail item-start>
-                    <img src="https://www.cats.org.uk/uploads/images/news/5ef10f2a-2852-42a8-b680-746f7e140d77.jpg">
-                  </ion-thumbnail>
-                  <h2>cat white shopping</h2>
-                </ion-item>
-                ...
-              </ion-list>
-
-              <div [ngSwitch]="pet">
-                <ion-list *ngSwitchCase="'Store'">
-                  <ion-item>
-                    <ion-thumbnail item-start>
-                      <img
-                        src="http://retaildesignblog.net/wp-content/uploads/2017/10/CAT-Concept-Store-by-Modulor-Retail-Architecture-Lima-Peru08.jpg">
-                    </ion-thumbnail>
-                    <h2>Cat shop</h2>
-                  </ion-item>
-                  ...
-                </ion-list>
-
-                  <ion-list *ngSwitchCase="'Buying'">
-                    <ion-item>
-                      <ion-thumbnail item-start>>
-                      </ion-thumbnail>
-                      <h2>IDR 20,000</h2>
-                    </ion-item>
-                    ...
-                  </ion-list>
-
-                  <ion-list *ngSwitchCase="'Buying'">
-                    <ion-item>
-                      <ion-thumbnail item-start>>
-                      </ion-thumbnail>
-                      <h2>IDR 23,000</h2>
-                    </ion-item>
-                    ...
-                  </ion-list>
-
-                  <ion-list *ngSwitchCase="'Buying'">
-                    <ion-item>
-                      <ion-thumbnail item-start>>
-                      </ion-thumbnail>
-                      <h2>IDR 21,000</h2>
-                    </ion-item>
-                    ...
-                  </ion-list>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
 </ion-content>
