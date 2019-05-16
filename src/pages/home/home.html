@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar color="biruTua">
-    <ion-title text-center>Mengais</ion-title>
+    <ion-title text-center>Timeline</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content text-center>
+<ion-content>
   <ion-fab right bottom>
     <button ion-fab color="BiruTua" (click)="tambahFoto()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
-  <img *ngFor="let data of dataUpload" class="gambar" [src]="data.foto" alt="picture">
+  <div>
+    <img *ngFor="let data of dataUpload" class="gambar" [src]="data.foto" alt="picture">
+    <h2>{{data.judul}}</h2>
+    <p class="deskripsi">{{data.deskripsi}}</p>
+  </div>
+  
 </ion-content>
