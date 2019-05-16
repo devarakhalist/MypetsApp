@@ -10,8 +10,8 @@
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
-  <div>
-    <img *ngFor="let data of dataUpload" class="gambar" [src]="data.foto" alt="picture">
+  <div *ngFor="let data of dataUpload">
+    <img  class="gambar" [src]="data.foto" alt="picture">
     <h2>{{data.judul}}</h2>
     <p class="deskripsi">{{data.deskripsi}}</p>
   </div>
