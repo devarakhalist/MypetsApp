@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>Mypets</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img src="https://www.sctech.edu/wp-content/plugins/ajax-search-pro/img/default.jpg" *ngIf="!data.image" class="pict"
+    (click)="bukaRinci(data)" />
+  <img [src]="data.image" *ngIf="data.image" class="pict" (click)="bukaRinci(data)" />
+  <ion-card-content (click)="bukaRinci(data)">
+    <p class="JudulItem">{{data.nama}}</p>
+    <p class="HargaItem">
+      Rp. {{data.price}}
+    </p>
+  </ion-card-content>
+</ion-content>

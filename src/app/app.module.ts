@@ -13,6 +13,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MasukPage } from '../pages/masuk/masuk';
 import { DaftarPage } from '../pages/daftar/daftar';
 import { TimelineLainPage } from '../pages/timeline-lain/timeline-lain';
+import { RinciprodukPage } from '../pages/rinciproduk/rinciproduk';
+import { PhotoPage } from '../pages/photo/photo';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TimelineLainPage } from '../pages/timeline-lain/timeline-lain';
     TabsPage,
     MasukPage,
     DaftarPage,
-    TimelineLainPage
+    TimelineLainPage,
+    RinciprodukPage,
+    PhotoPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { TimelineLainPage } from '../pages/timeline-lain/timeline-lain';
     TabsPage,
     MasukPage,
     DaftarPage,
-    TimelineLainPage
+    TimelineLainPage,
+    RinciprodukPage,
+    PhotoPage
   ],
   providers: [
     StatusBar,

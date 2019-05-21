@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, App, NavParams } from 'ionic-angular';
+import { RinciprodukPage } from '../rinciproduk/rinciproduk';
+import { PhotoPage } from '../photo/photo';
 
 @Component({
   selector: 'page-about',
@@ -7,8 +9,30 @@ import { NavController, App, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
-  pet : any = "Tokopedia"
+  pet : any = "Mypets"
 
+  foto = [
+    {
+      nama: "abc",
+      foto : "https://www.guidedogsvictoria.com.au/wp-content/themes/default/static/img/puppy.png"
+    },
+    {
+      nama: "abc",
+      foto : "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg"
+    },
+    {
+      nama: "abc",
+      foto : "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1546554600360.adapt.1900.1.jpg"
+    },
+    {
+      nama: "abc",
+      foto : "https://www.conservationnw.org/wp-content/uploads/2017/06/Entiat-Wolf_Craig-Monnette2-2-e1511831490745.jpg",
+    },
+    {
+      nama: "abc",
+      foto : "https://earthjustice.org/sites/default/files/styles/image_800x600/public/mexican-gray-wolf_don-burkett-800.jpg?itok=LadqU1Ws"
+    }
+  ]
   barang = [
     {
       "id" : 0,
@@ -57,5 +81,12 @@ export class AboutPage {
     this.barang[data.id].favorit = !this.barang[data.id].favorit 
   }
 
+  bukaRinci(data){
+    this.app.getRootNav().push(RinciprodukPage, data)
+  }
+  
+  bukaPhoto(data){
+    this.app.getRootNav().push(PhotoPage, data)
+  }
 
 }
