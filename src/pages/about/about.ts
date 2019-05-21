@@ -14,7 +14,10 @@ export class AboutPage {
   foto = [
     {
       nama: "abc",
-      foto : "https://www.guidedogsvictoria.com.au/wp-content/themes/default/static/img/puppy.png"
+      foto : "https://www.guidedogsvictoria.com.au/wp-content/themes/default/static/img/puppy.png",
+      jenis : "",
+      gender : "",
+      
     },
     {
       nama: "abc",
