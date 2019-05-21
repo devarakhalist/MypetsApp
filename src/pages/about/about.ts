@@ -15,25 +15,57 @@ export class AboutPage {
     {
       nama: "abc",
       foto : "https://www.guidedogsvictoria.com.au/wp-content/themes/default/static/img/puppy.png",
-      jenis : "",
-      gender : "",
-      
+      jeniskelamin : "",
+      hariadopsi : "",
+      umur : "",
+      ukuran : "",
+      bulu : "",
+      lokasi : "",
+      pemilik : ""
     },
     {
       nama: "abc",
-      foto : "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg"
+      foto : "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg",
+      jeniskelamin : "",
+      hariadopsi : "",
+      umur : "",
+      ukuran : "",
+      bulu : "",
+      lokasi : "",
+      pemilik : ""
     },
     {
       nama: "abc",
-      foto : "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1546554600360.adapt.1900.1.jpg"
+      foto : "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1546554600360.adapt.1900.1.jpg",
+      jeniskelamin : "",
+      hariadopsi : "",
+      umur : "",
+      ukuran : "",
+      bulu : "",
+      lokasi : "",
+      pemilik : ""
     },
     {
       nama: "abc",
       foto : "https://www.conservationnw.org/wp-content/uploads/2017/06/Entiat-Wolf_Craig-Monnette2-2-e1511831490745.jpg",
+      jeniskelamin : "",
+      hariadopsi : "",
+      umur : "",
+      ukuran : "",
+      bulu : "",
+      lokasi : "",
+      pemilik : ""
     },
     {
       nama: "abc",
-      foto : "https://earthjustice.org/sites/default/files/styles/image_800x600/public/mexican-gray-wolf_don-burkett-800.jpg?itok=LadqU1Ws"
+      foto : "https://earthjustice.org/sites/default/files/styles/image_800x600/public/mexican-gray-wolf_don-burkett-800.jpg?itok=LadqU1Ws",
+      jeniskelamin : "",
+      hariadopsi : "",
+      umur : "",
+      ukuran : "",
+      bulu : "",
+      lokasi : "",
+      pemilik : ""
     }
   ]
   barang = [
