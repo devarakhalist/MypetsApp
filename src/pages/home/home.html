@@ -11,9 +11,11 @@
     </button>
   </ion-fab>
   <div *ngFor="let data of dataUpload">
-    <img  class="gambar" [src]="data.foto" alt="picture">
-    <h2>{{data.judul}}</h2>
-    <p class="deskripsi">{{data.deskripsi}}</p>
+    <img class="gambar" [src]="data.foto" alt="picture">
+    <div padding>
+      <h2>{{data.judul}}</h2>
+      <p class="deskripsi">{{data.deskripsi}}</p>
+    </div>
   </div>
-  
+
 </ion-content>
